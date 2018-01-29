@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    android:background="@android:color/white"
+    android:weightSum="1"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/back"
+            android:background="@drawable/back"
+            android:layout_height="50dp"
+            android:layout_width="50dp"
+            android:layout_alignParentLeft="true"
+            android:onClick="back"
+            android:layout_alignBottom="@+id/home"
+            android:layout_marginTop="7dp"/>
+
+        <ImageView
+            android:id="@+id/diarylogo"
+            android:layout_width="156dp"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/suitlogo" />
+
+        <Button
+            android:id="@+id/home"
+            android:layout_width="45dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/home"
+            android:onClick="home"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="7dp"/>
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/suit0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/gukak"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="#국악"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:minHeight="33dp"
+                    android:minWidth="70dp"
+                    android:onClick="onClickGenre"
+                    android:padding="10dp" />
+
+                <Button
+                    android:id="@+id/solo"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="#독주/독창회"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:minHeight="33dp"
+                    android:minWidth="70dp"
+                    android:onClick="onClickGenre"
+                    android:padding="10dp" />
+
+                <Button
+                    android:id="@+id/dance"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="#무용"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:minHeight="33dp"
+                    android:minWidth="70dp"
+                    android:onClick="onClickGenre"
+                    android:padding="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/musical"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="#뮤지컬/오페라"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:minHeight="33dp"
+                    android:minWidth="70dp"
+                    android:onClick="onClickGenre"
+                    android:padding="10dp" />
+
+                <Button
+                    android:id="@+id/culture"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="#문화교양/강좌"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:minHeight="33dp"
+                    android:minWidth="70dp"
+                    android:onClick="onClickGenre"
+                    android:padding="10dp" />
+
+                <Button
+                    android:id="@+id/theater"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="#연극"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:minHeight="33dp"
+                    android:minWidth="70dp"
+                    android:onClick="onClickGenre"
+                    android:padding="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/movie"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="#영화"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:minHeight="33dp"
+                    android:minWidth="70dp"
+                    android:onClick="onClickGenre"
+                    android:padding="10dp" />
+
+                <Button
+                    android:id="@+id/art"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="#전시/미술"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:minHeight="33dp"
+                    android:minWidth="70dp"
+                    android:onClick="onClickGenre"
+                    android:padding="10dp" />
+
+                <Button
+                    android:id="@+id/festival"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="#축제"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:minHeight="33dp"
+                    android:minWidth="70dp"
+                    android:onClick="onClickGenre"
+                    android:padding="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/classic"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="#클래식"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:minHeight="33dp"
+                    android:minWidth="70dp"
+                    android:onClick="onClickGenre"
+                    android:padding="10dp" />
+
+                <Button
+                    android:id="@+id/consert"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="#콘서트"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:minHeight="33dp"
+                    android:minWidth="70dp"
+                    android:onClick="onClickGenre"
+                    android:padding="10dp" />
+
+                <Button
+                    android:id="@+id/etc"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="#기타"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:minHeight="33dp"
+                    android:minWidth="70dp"
+                    android:onClick="onClickGenre"
+                    android:padding="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/suit1"></ImageView>
+
+                <EditText
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="YYYY-MM-DD로 적어주세요 -는 필수입니다!"
+                    android:textColor="#000000"
+                    android:textColorHint="#adadad" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/suit2"></ImageView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/gangseo"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:minHeight="33dp"
+                    android:minWidth="80dp"
+                    android:onClick="onClickArea"
+                    android:padding="10dp"
+                    android:text="#강서구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"/>
+
+                <Button
+                    android:id="@+id/gangbuk"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="#강북구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:minHeight="33dp"
+                    android:minWidth="80dp"
+                    android:onClick="onClickArea"
+                    android:padding="10dp" />
+
+                <Button
+                    android:id="@+id/gangdong"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="#강동구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:minHeight="33dp"
+                    android:minWidth="80dp"
+                    android:onClick="onClickArea"
+                    android:padding="10dp"></Button>
+
+                <Button
+                    android:id="@+id/gangnam"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="#강남구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:minHeight="33dp"
+                    android:minWidth="80dp"
+                    android:onClick="onClickArea"
+                    android:padding="10dp"></Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/guro"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="#구로구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:minHeight="33dp"
+                    android:minWidth="80dp"
+                    android:onClick="onClickArea"
+                    android:padding="10dp"></Button>
+
+                <Button
+                    android:id="@+id/geumcheon"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="#금천구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:minHeight="33dp"
+                    android:minWidth="80dp"
+                    android:onClick="onClickArea"
+                    android:padding="10dp"></Button>
+
+                <Button
+                    android:id="@+id/gwangjin"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#f4f2f2"
+                    android:minHeight="33dp"
+                    android:minWidth="80dp"
+                    android:onClick="onClickArea"
+                    android:padding="10dp"
+                    android:text="#광진구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"></Button>
+
+                <Button
+                    android:id="@+id/gwanak"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="#관악구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:minHeight="33dp"
+                    android:minWidth="80dp"
+                    android:onClick="onClickArea"
+                    android:padding="10dp"></Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/nowon"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="#노원구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:minHeight="33dp"
+                    android:minWidth="80dp"
+                    android:onClick="onClickArea"
+                    android:padding="10dp"></Button>
+
+                <Button
+                    android:id="@+id/dongjak"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="#동작구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:minHeight="33dp"
+                    android:minWidth="80dp"
+                    android:onClick="onClickArea"
+                    android:padding="10dp"></Button>
+
+
+                <Button
+                    android:id="@+id/dongdeamun"
+                    android:onClick="onClickArea"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:minWidth="90dp"
+                    android:minHeight="33dp"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="#동대문구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"></Button>
+
+                <Button
+                    android:id="@+id/dobong"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#f4f2f2"
+                    android:minHeight="33dp"
+                    android:minWidth="80dp"
+                    android:onClick="onClickArea"
+                    android:padding="10dp"
+                    android:text="#도봉구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"></Button>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/mapo"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:minWidth="80dp"
+                    android:minHeight="33dp"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="#마포구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:onClick="onClickArea"></Button>
+
+                <Button
+                    android:id="@+id/seodeamun"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:minWidth="80dp"
+                    android:minHeight="33dp"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="#서대문구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:onClick="onClickArea">
+                </Button>
+
+                <Button
+                    android:id="@+id/sungdong"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:minWidth="80dp"
+                    android:minHeight="33dp"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="#성동구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:onClick="onClickArea"></Button>
+
+
+                <Button
+                    android:id="@+id/sungbuk"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:minWidth="80dp"
+                    android:minHeight="33dp"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="#성북구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:onClick="onClickArea"></Button>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/seocho"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:minWidth="80dp"
+                    android:minHeight="33dp"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="#서초구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:onClick="onClickArea"></Button>
+
+
+                <Button
+                    android:id="@+id/songpa"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:minWidth="80dp"
+                    android:minHeight="33dp"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="#송파구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:onClick="onClickArea"></Button>
+
+                <Button
+                    android:id="@+id/yangcheon"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:minWidth="80dp"
+                    android:minHeight="33dp"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="#양천구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:onClick="onClickArea"></Button>
+
+                <Button
+                    android:id="@+id/youngdeungpo"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:minWidth="80dp"
+                    android:minHeight="33dp"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="#영등포구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:onClick="onClickArea">
+
+                </Button>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/eunpyeong"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:minWidth="80dp"
+                    android:minHeight="33dp"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="#은평구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:onClick="onClickArea">
+
+                </Button>
+
+                <Button
+                    android:id="@+id/yongsan"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:minWidth="80dp"
+                    android:minHeight="33dp"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="#용산구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:onClick="onClickArea"></Button>
+
+                <Button
+                    android:id="@+id/jongno"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:minWidth="80dp"
+                    android:minHeight="33dp"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="#종로구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:onClick="onClickArea"></Button>
+
+                <Button
+                    android:id="@+id/jung"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:minWidth="80dp"
+                    android:minHeight="33dp"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="#중구"
+                    android:textColor="#adadad"
+                    android:textSize="15dp"
+                    android:background="#f4f2f2"
+                    android:onClick="onClickArea"></Button>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/jungrang"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:minWidth="80dp"
+                android:minHeight="33dp"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="#중랑구"
+                android:textColor="#adadad"
+                android:textSize="15dp"
+                android:background="#f4f2f2"
+                android:onClick="onClickArea"></Button>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp">
+
+                <Button
+                    android:id="@+id/CheckGenre"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:onClick="onClickSelect"
+                    android:background="@drawable/gs"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="50dp"/>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    android:background="@android:color/white"
+    android:weightSum="1"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/back"
+            android:background="@drawable/back"
+            android:layout_height="50dp"
+            android:layout_width="50dp"
+            android:layout_alignParentLeft="true"
+            android:onClick="back"
+            android:layout_alignBottom="@+id/home"
+            android:layout_marginTop="7dp"/>
+
+        <ImageView
+            android:id="@+id/diarylogo"
+            android:layout_width="156dp"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/mc" />
+
+        <Button
+            android:id="@+id/home"
+            android:layout_width="45dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/home"
+            android:onClick="home"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="7dp"/>
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line"/>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <WebView
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:layout_marginLeft="85dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:scrollbars="none"
+                android:id="@+id/web2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="11dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/content"
+                android:textSize="8pt"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="13dp"
+                android:layout_below="@+id/web2"
+                android:textColor="#000000"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </ScrollView>
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/Link"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/informationclick"
+        android:onClick="LinkButtonClick" />
+</RelativeLayout>
+
+
+
+</LinearLayout>
